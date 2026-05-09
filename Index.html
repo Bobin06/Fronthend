@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Website</title>
+</head>
+<body>
+  <h1>Hello World</h1>
+
+  <button onclick="getData()">
+    Test Backend
+  </button>
+
+  <p id="result"></p>
+
+  <script>
+    async function getData() {
+      const response = await fetch("https://prompts-y2x6.onrender.com");
+      const data = await response.text();
+
+      document.getElementById("result").innerText = data;
+    }
+  </script>
+</body>
+</html>
